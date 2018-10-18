@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+	<input type="color" />
+	<script type="text/javascript">
+		$("input").click(function () { 
+    		console.log("opened"); 
+  			window.colorPickerIsOpened = true; 
+		});
+		$("input").focusin(function () { 
+    		if (window.colorPickerIsOpened) { 
+    			console.log("closed"); 
+    			window.colorPickerIsOpened = false; 
+  			} 
+		});
+	</script>
+</body>
+</html>
